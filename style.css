@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* coolors website provides good color palletes */
+body {
+  background-color: #548687;
+  background-color: #921a40;
+  background-color: #2a4038;
+  /* background-color: #921; */
+  /* background-color: #7e4b8b; */
+  /* background-color: #4C020F; */
+  /* hum chahe toh apne saare elements ko center mein bhi align kar sakte hain */
+  text-align: center;
+}
+
+.container {
+  /* is container ko hum height denge as 70 percent of the view port height, yaani jitna bhi humara page visible hoga uska 70 percent part humesha humare container ke paas rahega chahe hum kitna bhi content likh de */
+  height: 70vh;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+}
+
+/* container ke andar humara game aa rha hai aur game ke andar humare bahut saaare boxes aa rhe hain */
+
+/* **Understanding `vmin` in Layman's Terms:**
+
+`vmin` is a unit of measurement in CSS that stands for "viewport minimum." The viewport is basically the visible area of your web browser window where the content is displayed. The "minimum" part means it takes the smaller value between the width and height of the viewport.
+
+- If your browser window is taller than it is wide, `vmin` will be based on the width.
+- If your browser window is wider than it is tall, `vmin` will be based on the height.
+
+This unit is particularly useful when you want your design elements to scale proportionally depending on the size of the user's browser window.
+
+**How `vmin` is Used in Your Code:**
+
+1. **Game Container (`.game`):**
+   - `height: 60vmin;` means the height of the game area will be 60% of the smaller dimension (either the height or width) of the viewport. This ensures that the game area remains responsive and fits well on screens of various sizes without distorting.
+
+2. **Individual Boxes (`.box`):**
+   - `height: 18vmin;` means each box's height will be 18% of the smaller dimension of the viewport. This makes each box within the Tic-Tac-Toe grid scale appropriately with the size of the game container, ensuring that the entire grid is evenly spaced and looks consistent across different devices.
+
+In simple terms, using `vmin` makes sure that your Tic-Tac-Toe game looks good on both wide and narrow screens because the size of the elements adjusts according to the available screen space. */
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* boxes ke beech mein thodi si space create karne ke liye we can use the gap property */
+  gap: 1.5vmin;
+}
+
+.box {
+  /* hum chahte hain ek line ke andar 3 boxes aaye, toh agar humari height 60% hai, toh use hum teen lines mein divide karna chahte hain, toh har line approximately 20 percent milna chahiye,   */
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: #b0413e;
+  background-color: #ffffc7;
+}
+
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+
+#h1 {
+  color: whitesmoke;
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 8vmin;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+#excited {
+  width: 45vmin;
+}
+
+.hide {
+  display: none;
+}
+
+/* .line {
+  background-color: black;
+  height: 100%;
+  width: 60vmin;
+  position: absolute;
+} */
+
+
+
